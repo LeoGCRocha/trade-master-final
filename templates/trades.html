@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/trades.css') }}">
+    <div class="container">
+        <h2> >> Bem vindo {{ u.getNome() }} <button type="button" class="btn btn-danger"><a href="{{url_for('deslogar')}}">Deslogar</a></button> </h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Selecione a ação que deseja operar:</h3><br>
+                <button type="button" class="btn btn-info btn-lg"><a href="{{ url_for('investimento', empresa='ambev') }}">AMBEV</a></button>
+                <button type="button" class="btn btn-info btn-lg"><a href="{{ url_for('investimento', empresa='vale') }}">VALE</a></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <h3>Ultima atualização:</h3><br>
+                <h1>{{tempo}}</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+.container h2{
+    color: white;
+}
+.col{
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+button a{
+    color: white;
+    text-decoraion: none;
+}
+button a:hover{
+    color: white;
+    text-decoraion: none;
+}
